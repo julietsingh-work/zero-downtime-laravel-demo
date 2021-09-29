@@ -36,10 +36,10 @@ task('deploy:secrets', function () {
 
 // Hosts
 host('production.app.com') // Name of the server
-->hostname('178.128.84.15') // Hostname or IP address
-->stage('production') // Deployment stage (production, staging, etc)
-->user('dep') // SSH user
-->set('deploy_path', '/var/www'); // Deploy path
+->hostname('34.204.59.179') // Hostname or IP address
+->stage('staging') // Deployment stage (production, staging, etc)
+->user('ubuntu') // SSH user
+->set('deploy_path', '/tmp/'); // Deploy path
 
 after('deploy:failed', 'deploy:unlock'); // Unlock after failed deploy
 
